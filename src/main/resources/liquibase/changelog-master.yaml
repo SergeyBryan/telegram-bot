@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-notification-table
+      author: sergey
+      changes:
+        -createTable:
+          tableName: Notification_new
+          columns:
+            - column:
+                name: id
+                autoIncrement: true
+                type: bigint
+            - column:
+                name: date
+                type: DATETIME
+            - column:
+                name: message
+                type: VARCHAR(255)
+
